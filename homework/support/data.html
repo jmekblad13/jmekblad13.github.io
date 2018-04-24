@@ -1,79 +1,41 @@
 <!DOCTYPE html>
 
-<html lang="en">
-
+  <html lang="en">
     
-<head>
-  <meta charset="UTF-8">
-  <title>Web Visualization Dashboard</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <title>Wind Speed</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-
-<body>
+  <body>
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://jmekblad13.github.io/homework/support/">Latitude</a>
-          </div>
-    
-          
-            <ul class="nav navbar-nav navbar-right">
-                
-              <li class="dropdown">
-                <a href="https://jmekblad13.github.io/homework/support/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  
-                  <li><a href="https://jmekblad13.github.io/homework/support/max_temp.html">Max Temperature</a></li>
-                  <li><a href="https://jmekblad13.github.io/homework/support/humidity.html">Humidity</a></li>
-                  <!-- <li role="separator" class="divider"></li> -->
-                  <li><a href="https://jmekblad13.github.io/homework/support/cloudiness.html">Cloudiness</a></li>
-                  <li><a href="https://jmekblad13.github.io/homework/support/wind_speed.html">Wind Speed</a></li>
-                </ul>
-              </li>
-              <li><a href="https://jmekblad13.github.io/homework/support/comparison.html">Comparison</a></li>
-              <li><a href="https://jmekblad13.github.io/homework/support/data.html">Data</a></li>
-            </ul>
-          </div>
-          <!-- /.navbar-collapse -->
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="https://jmekblad13.github.io/homework/support/">Latitude</a>
         </div>
-        <!-- /.container-fluid -->
-      </nav>
+        <ul class="nav navbar-nav navbar-right">        
+          <li class="dropdown">
+            <a href="https://jmekblad13.github.io/homework/support/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://jmekblad13.github.io/homework/support/max_temp.html">Max Temperature</a></li>
+              <li><a href="https://jmekblad13.github.io/homework/support/humidity.html">Humidity</a></li>
+              <li><a href="https://jmekblad13.github.io/homework/support/cloudiness.html">Cloudiness</a></li>
+              <li><a href="https://jmekblad13.github.io/homework/support/wind_speed.html">Wind Speed</a></li>
+            </ul>
+          </li>
+          <li><a href="https://jmekblad13.github.io/homework/support/comparison.html">Comparison</a></li>
+          <li><a href="https://jmekblad13.github.io/homework/support/data.html">Data</a></li>
+        </ul>
+      </div>
+    </nav>
 
-
-      <div class="container">
-       
-        <div class="row">
-            <div class="col-md-8">
-                <h3 class="text-center">Data</h3>
-            
-            
-              <!--
-              <div class="caption">
-                <h3>Thumbnail label</h3>
-                <p>...</p>
-                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-              </div>
-            -->
-                <p>
-
-                The following table includes all of the data used for plotting during this project.
-                </p>
-              
-                
-            </div>
-          </div>
-    
-        <div class="row">
+    <div class="container">
+        <h3>Data</h3>
+        <h1>The following table includes all of the data used for plotting during this project.</h1>       <h3 class="divider"></h3>
             <table class="table table-bordered table-hover table-condensed">
                 <tbody><tr>
                 <td>City_ID</td>
@@ -7480,22 +7442,7 @@
                 <td>5.75</td>
                 </tr>
                 </tbody></table>
-
-
-
-
-        </div>
-
-
-
-
-        </div>
-    
-
-      </div>
-    
-</body>
-
-
-
-</html>
+  
+    </div>
+  </body>
+  </html>
