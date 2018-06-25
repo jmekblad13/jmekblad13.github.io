@@ -100,7 +100,7 @@ function createFeatures(earthquakeData) {
         // Color scale
         scale: ["red", "blue"],
         // Number of breaks in step range
-        steps: 10,
+        steps: 5,
         // q for quantile, e for equidistant, k for k-means
         mode: "q",
         // color: "purple",
