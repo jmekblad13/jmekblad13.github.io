@@ -98,7 +98,7 @@ function createFeatures(earthquakeData) {
         fillOpacity: 0.75,
         valueProperty: "mag",
         // Color scale
-        scale: ["#ffffb2", "#b10026"],
+        scale: ["red", "blue"],
         // Number of breaks in step range
         steps: 10,
         // q for quantile, e for equidistant, k for k-means
