@@ -151,16 +151,20 @@ function createMap(earthquakes) {
   var link = "https://jmekblad13.github.io/earthquatkehw/plates.json";
 
   // Grabbing our GeoJSON data..
+  var fault = []
+  
   d3.json(link, function(data) {
     // Creating a GeoJSON layer with the retrieved data
     console.log(data);
-    L.geoJson(data).addTo(map);
+    fault.push(L.geoJson(data));//.addTo(map);
   });
 
+  var faults = L.layerGroup(fault);
 
   // Create overlay object to hold our overlay layer
   var overlayMaps = {
-    Earthquakes: earthquakes
+    Earthquakes: earthquakes,
+    Fault_Lines: faults
   };
 
   // Create our map, giving it the streetmap and earthquakes layers to display on load
