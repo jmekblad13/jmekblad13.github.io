@@ -100,13 +100,13 @@ function createFeatures(earthquakeData) {
         // Color scale
         scale: ["red", "blue"],
         // Number of breaks in step range
-        steps: 10,
+        steps: 5,
         // q for quantile, e for equidistant, k for k-means
         mode: "q",
         // color: "purple",
         // fillColor: "purple",
         radius: circleSize(earthquakeData[i].properties.mag)
-      })
+      }).bindPopup("<h3>" + earthquakeData[i].properties.place +"</h3><hr><p>" + new Date(earthquakeData[i].properties.time) + "</p>")
     );
     
     var earthquakes = L.layerGroup(quakes);
@@ -148,9 +148,23 @@ function createMap(earthquakes) {
     "Dark Map": darkmap
   };
 
+  var link = "https://jmekblad13.github.io/earthquatkehw/plates.json";
+
+  // Grabbing our GeoJSON data..
+  var fault = []
+  
+  d3.json(link, function(data) {
+    // Creating a GeoJSON layer with the retrieved data
+    console.log(data);
+    fault.push(L.geoJson(data));//.addTo(map);
+  });
+
+  var faults = L.layerGroup(fault);
+
   // Create overlay object to hold our overlay layer
   var overlayMaps = {
-    Earthquakes: earthquakes
+    Earthquakes: earthquakes,
+    Fault_Lines: faults
   };
 
   // Create our map, giving it the streetmap and earthquakes layers to display on load
