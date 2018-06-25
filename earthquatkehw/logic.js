@@ -106,7 +106,7 @@ function createFeatures(earthquakeData) {
         // color: "purple",
         // fillColor: "purple",
         radius: circleSize(earthquakeData[i].properties.mag)
-      }).bindPopup("<h3>" + feature.properties.place +"</h3><hr><p>" + new Date(feature.properties.time) + "</p>")
+      }).bindPopup("<h3>" + earthquakeData[i].properties.place +"</h3><hr><p>" + new Date(earthquakeData[i].properties.time) + "</p>")
     );
     
     var earthquakes = L.layerGroup(quakes);
