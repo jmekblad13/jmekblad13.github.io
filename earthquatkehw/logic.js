@@ -90,7 +90,10 @@ function createFeatures(earthquakeData) {
     //     radius: markerSize(locations[i].state.population)
     //   })
     // );
-  
+    
+    var lowColor = '#f9f9f9';
+    var highColor = '#bc2a66';
+    var ramp = d3.scaleLinear().domain([0,10]).range([lowColor,highColor]);
     // Setting the marker radius for the city by passing population into the markerSize function
     quakes.push(
       L.circle([earthquakeData[i].geometry.coordinates[1],earthquakeData[i].geometry.coordinates[0]], {
@@ -98,13 +101,13 @@ function createFeatures(earthquakeData) {
         fillOpacity: 0.75,
         valueProperty: "mag",
         // Color scale
-        scale: ["red", "blue"],
+        scale: ["#ffffb2", "#b10026"],//["red", "blue"],
         // Number of breaks in step range
         steps: 5,
         // q for quantile, e for equidistant, k for k-means
-        mode: "q",
+        //mode: "q",
         // color: "purple",
-        // fillColor: "purple",
+        fillColor: function(d) { return ramp(earthquakeData[i].properties.mag) },
         radius: circleSize(earthquakeData[i].properties.mag)
       }).bindPopup("<h3>" + earthquakeData[i].properties.place +"</h3><hr><p>" + new Date(earthquakeData[i].properties.time) + "</p>")
     );
