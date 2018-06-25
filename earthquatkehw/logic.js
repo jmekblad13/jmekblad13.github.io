@@ -174,7 +174,7 @@ function createMap(earthquakes) {
     legend.onAdd = function() {
       var div = L.DomUtil.create("div", "info legend");
       var limits = [0,2,4,6,8];
-      var colors = "#fff" //[geojson.options.colors];
+      var colors = [geojson.options.colors];
       var labels = [];
   
       // Add min & max
