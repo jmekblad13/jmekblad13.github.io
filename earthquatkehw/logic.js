@@ -162,8 +162,8 @@ function createMap(earthquakes) {
 
   // Create overlay object to hold our overlay layer
   var overlayMaps = {
-    Earthquakes: earthquakes,
-    Fault_Lines: faults
+    Earthquakes: earthquakes
+    //Fault_Lines: faults
   };
 
   // Create our map, giving it the streetmap and earthquakes layers to display on load
