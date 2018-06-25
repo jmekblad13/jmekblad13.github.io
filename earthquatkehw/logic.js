@@ -91,9 +91,9 @@ function createFeatures(earthquakeData) {
     //   })
     // );
     
-    var lowColor = '#f9f9f9';
-    var highColor = '#bc2a66';
-    var ramp = d3.scaleLinear().domain([0,10]).range([lowColor,highColor]);
+    //var lowColor = '#f9f9f9';
+    //var highColor = '#bc2a66';
+    //var ramp = d3.scaleLinear().domain([0,10]).range([lowColor,highColor]);
     
     function colorScale(magnitude) {
       switch (true) {
@@ -123,7 +123,7 @@ function createFeatures(earthquakeData) {
         // q for quantile, e for equidistant, k for k-means
         //mode: "q",
         // color: "purple",
-        fillColor: function(d) { return colorScale(earthquakeData[i].properties.mag) },
+        fillColor: colorScale(earthquakeData[i].properties.mag),
         radius: circleSize(earthquakeData[i].properties.mag)
       }).bindPopup("<h3>" + earthquakeData[i].properties.place +"</h3><hr><p>" + new Date(earthquakeData[i].properties.time) + "</p>")
     );
