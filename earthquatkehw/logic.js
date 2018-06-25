@@ -156,8 +156,8 @@ function createMap(earthquakes) {
   d3.json(link, function(data) {
     // Creating a GeoJSON layer with the retrieved data
     console.log(data);
-    //L.geoJson(data).addTo(map);
-    var faults = L.layerGroup(L.geoJson(data));
+    L.geoJson(data).addTo(earthquakes);
+    //var faults = L.layerGroup(L.geoJson(data));
   });
 
   // Create overlay object to hold our overlay layer
