@@ -1,84 +1,53 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>John Michael Ekblad</title>
-  <style>
-    h1 {
-      font-size:60px;
-      color:darkblue;
-      margin-bottom:15px;
-      text-align:center;
-    }
-  
-    h2 {
-      text-decoration: underline;
-      font-size:40px;
-      color: red;
-
-    }
-    img{
-      margin-left:auto;
-      margin-right:auto;
-      display:block;
-    }
-  </style>
+	<meta charset="UTF-8">
+	<title>D3Times</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 </head>
-
 <body>
-    <h1>John Michael Ekblad</h1>
-    
-    <img src="71.jpeg" alt=":)">
-    <p>
-        <h2>My name is John. My wife Jackie is the best!</h2>
-    </p>
-    <p>
-        I am enrolled in Northwestern's Data Science Boot Camp.
-    </p>
-  
-    <a href="https://jmekblad13.github.io/projectwebsite/">This is my first project</a>
+	<!-- <div class="container"> -->
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-md-offset-0">
+				<h1>D3Times</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12  col-md-9 col-md-offset-0">
+				<div class="iframeContainer">
+					<iframe src="d3.html" height="100%" width="100%"></iframe>
+					<!-- <div src="d3.html">	</div> -->
+					<!-- Students: Add a responsive iframe here that includes the d3.html file -->
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12  col-md-9 col-md-offset-0">
+				<div class="article">
+					<!-- Students: Replace with your analysis of the data -->
+					<h3>Lose Weight, Make More Money!</h3>
+					<p>Based on statistics from the Centers for Disease Control and Prevention and the United States Census Bureau,
+						the percentage of residents in a state with a normal body mass index (18.5-24.9%) is correlated with mean household
+						income (correlation = .644526). As you can see in the chart above, states with higher percentages of residents with
+						a normal BMI generally have higher mean household incomes.
+						This suggests that getting in shape could increase your annual household income. So,
+						please stay tuned for a word from one of our health food sponsors!
+					</p>
+				</div>
+			</div>
+		</div>
+	<!-- </div> -->
 
-    <ul>
-        <li><a href="facebook.com">Facebook</a></li>
-        <li><a href="linkedin.com">LinkedIn</a></li>
-    </ul>
-
-    <table border="1">
-        <thead>
-          <tr>
-            <th colspan="3">John Michael's Favorite Things</th>
-          </tr>
-          <tr>
-            <th>Bands</th>
-            <th>Books</th>
-            <th>Activities</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Zac Brown Band</td>
-            <td>The Art of Racing in the Rain</td>
-            <td>Golf</td>
-          </tr>
-          <tr>
-            <td>Mumford and Sons</td>
-            <td>Born to Run</td>
-            <td>Cubs</td>
-          </tr>
-          <tr>
-            <td>Pearl Jam</td>
-            <td>The Soul of an Octopus</td>
-            <td>Cooking</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3">Thank you for visiting!</td>
-          </tr>
-        </tfoot>
-      </table>
+		<!-- Footer-->
+	<div id="footer">
+		<p>(C) JME 2018<!-- Insert your Copyright Info here --></p>
+	</div>
 
 </body>
-
 </html>
