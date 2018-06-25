@@ -148,6 +148,16 @@ function createMap(earthquakes) {
     "Dark Map": darkmap
   };
 
+  var link = "https://jmekblad13.github.io/earthquatkehw/plates.json";
+
+  // Grabbing our GeoJSON data..
+  d3.json(link, function(data) {
+    // Creating a GeoJSON layer with the retrieved data
+    console.log(data);
+    L.geoJson(data).addTo(map);
+  });
+
+
   // Create overlay object to hold our overlay layer
   var overlayMaps = {
     Earthquakes: earthquakes
